@@ -44,4 +44,36 @@ myDate.add(6, "years");
 myDate.printFormat();  // Año: 2022 Mes: 6 Dia: 12
 ```
 
+## Clase 4: Acceso Público
+
+El acceso publico nos permite **acceder** a las propiedades y métodos del objeto desde el exterior.
+
+Por defecto, todas las propiedades y métodos son públicos pero si queremos hacerlo de manera explicita podemos utilizar la palabra reservada `public`.
+
+```tsx
+class MyDate {
+  public year: number
+  public month: number
+  day: number
+
+  constructor(year: number, month: number, day: number) {
+    // Code
+  }
+	public printFormat(): string {
+    // Code
+  }
+  add() {
+    // Code
+  }
+}
+
+const myDate = new MyDate(2016, 6, 12)
+
+// Se pueden usar estos metodos fuera de la clase
+myDate.add();
+myDate.printFormat();
+```
+
+La desventaja de esto es que estás pueden ser accesibles y modificadas desde fuera de la clase.
+
 #
