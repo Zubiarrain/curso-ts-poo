@@ -171,4 +171,21 @@ classClassName {
 }
 ```
 
+## clase 7: Getters
+
+Con `get` tenemos acceso a una propiedad y metodos con un scope privado. Se conocen tambien como **variables computadas**, ya que puede tomar propiedades y metodos para retornar un algo nuevo (*siempre deben retornar algo*) y luego obtener ese valor como una propiedad mas de la instancia, pero no podemos modificarlos o mutarlos.
+
+```tsx
+class ClassName {
+	constructor () {
+			statements
+	}
+
+	get variableComputed() {
+		statements
+		return something;
+	}
+}
+```
+
 #
