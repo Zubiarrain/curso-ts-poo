@@ -20,4 +20,28 @@ class MyDate {
 }
 ```
 
+## Clase 3: Métodos
+
+Los metodos describen el **comportamiento** de los objetos, se les conoce tambien como **funciones**.
+
+```tsx
+class MyDate {
+	// Code
+	printFormat(): string {
+    return `Año: ${this.year} Mes: ${this.month} Dia: ${this.day}`
+  }
+  add(amount: number, type: "days" | "months" | "years") {
+    type === "days" ? this.day += amount : ''
+    type === "months" ? this.month += amount : ''
+    type === "years" ? this.year += amount : ''
+  }
+}
+
+const myDate = new MyDate(2016, 6, 12);
+myDate.printFormat();  // Año: 2016 Mes: 6 Dia: 12
+
+myDate.add(6, "years");
+myDate.printFormat();  // Año: 2022 Mes: 6 Dia: 12
+```
+
 #
