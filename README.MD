@@ -76,4 +76,49 @@ myDate.printFormat();
 
 La desventaja de esto es que estás pueden ser accesibles y modificadas desde fuera de la clase.
 
+## Clase 5: Acceso privado
+
+Podemos **proteger** nuestras propiedades y métodos para que nos sean accedidos y modificados por fuera de clase.
+
+Con la palabra reservada `private` o con `#` estamos restringiendo el acceso de nuestros parámetros y métodos, solo podrán ser accedidos o modificados dentro de la clase.
+
+```tsx
+class MyDate {
+  // Code
+  private day: number
+
+  constructor(year: number, month: number, day: number) {
+    // Code
+  }
+	#addPadding(value: number): string {
+    if (value < 10) {
+      return `0${value}`
+    }
+
+    return `${value}`
+  }
+  getDay(): number {
+    return this.day
+  }
+	printFormat(): string {
+    const day = this.#addPadding(this.day)
+    const month = this.#addPadding(this.month)
+
+    return `${this.year}/${month}/${day}`
+  }
+  add() {
+    // Code
+  }
+}
+
+const myDate = new MyDate(2016, 6, 12)
+
+console.log(myDate.getDay());
+console.log(myDate.printFormat());
+
+// No se pueden acceder fuera de la clase
+// myDate.day;
+// myDate.#addPadding(12);
+```
+
 #
