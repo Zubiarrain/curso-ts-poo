@@ -121,4 +121,54 @@ console.log(myDate.printFormat());
 // myDate.#addPadding(12);
 ```
 
+## Clase 6: Constructor
+
+El `constructor` es donde construimos las propiedades de la clase y mandamos los parámetros por defecto por el cual queremos que se inicialice la instancia de un objeto.
+
+### Sintaxis anterior
+
+```tsx
+class ClassName {
+	property1: dataType;
+	p1ropertyN: dataType;
+
+	constructor (property1: number, propertyN: string) {
+		this.proterty1 = property1;
+		this.protertyN = propertyN;
+	}
+}
+```
+
+### Sintaxis en TypeScript
+
+De esta forma estaríamos definiendo y asignando las propiedades de una manera corta.
+
+Debemos ser explícitos con el **scope** de las propiedades (*añadir si es `public` o `private`*), de lo contrario no funcionaria esta característica de TypeScript, además que no podremos usar esa propiedad a lo largo de la clase, ya que su scope solo se verá limitado al mismo constructor.
+
+```tsx
+class ClassName {
+	constructor (
+		public property1: number,
+		private propertyN: string
+	) {
+		statements
+	}
+}
+```
+
+### Valores por defecto
+
+Al tener valores por defecto, al momento de crear una instancia de esa clase ya no es obligatorio pasar ese parámetro.
+
+```tsx
+classClassName {
+	constructor (
+		public property1: number = 7,
+		private propertyN: string = 'something'
+	) {
+		statements
+	}
+}
+```
+
 #
