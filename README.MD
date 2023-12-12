@@ -188,4 +188,22 @@ class ClassName {
 }
 ```
 
-#
+## Clase 8: Setters
+
+Es parecido a getters, solo que este **no retorna nada**, es un método void, pero no hace falta colocarle lo que retorna, ya que va a dar error.
+
+A `set` lo podemos usar para tener reglas de modificación para nuestros parámetros.
+
+```tsx
+classClassName {
+	constructor() {
+		statements
+	}
+
+	set methodName() {
+		statements
+	}
+}
+```
+
+##
