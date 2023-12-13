@@ -269,4 +269,28 @@ class ChildClass extends FatherClass {
 }
 ```
 
-##
+## Clase 11: Static
+
+Este tipo de métodos **no requieren crear una instancia**, sino que se pueden ejecutar directamente sobre la clase:
+
+```tsx
+class Animal {
+  static readonly despedirse() {
+    return "Adiós";
+  }
+
+  hablar() {
+    return "Cuak";
+  }
+}
+
+Animal.despedirse();   // Método estático (no requiere instancia): 'Adiós'
+Animal.hablar();       // Uncaught TypeError: Animal.hablar is not a function
+
+const pato = new Animal();  // Creamos una instancia
+
+pato.despedirse();     // Uncaught TypeError: pato.despedirse is not a function
+pato.hablar();         // Método no estático (requiere instancia): 'Cuak'
+```
+
+#
