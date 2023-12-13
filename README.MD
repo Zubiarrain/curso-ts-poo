@@ -333,4 +333,10 @@ abstract class Pet {} // No podemos instanciar pero si heredar
 class Dog extends Pet {} // De esta si podemos instanciar
 ```
 
+## Clase 14: Singleton
+
+Singleton nos previene crear múltiples instancias de una clase.
+
+Esto es muy usado en Arquitectura de Software, pues nos ayuda a ahorrar uso de memoria.
+
 #
