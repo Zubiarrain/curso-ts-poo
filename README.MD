@@ -339,4 +339,16 @@ Singleton nos previene crear múltiples instancias de una clase.
 
 Esto es muy usado en Arquitectura de Software, pues nos ayuda a ahorrar uso de memoria.
 
+# Clase 15: Promesas
+
+En el caso de no colocar el tipo de dato de retorno de nuestra función asíncrona, TypeScript supondrá que es una promesa, pero no sabe el tipo de dato que retorna esa promesa.
+
+Podemos tipar a una promesa con genéricos:
+
+```tsx
+const variableName = new Promise<dataType>(...);
+```
+
 #
+
+
