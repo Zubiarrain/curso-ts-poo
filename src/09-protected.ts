@@ -1,4 +1,4 @@
-export class Animal {
+export abstract class Animal {
   constructor(protected name:string){} // -> Se accede internamente y los herederos, pero no desde afuera
 
   move(){

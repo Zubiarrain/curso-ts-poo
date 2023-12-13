@@ -321,4 +321,16 @@ class NameClass implements NameInterface {
 }
 ```
 
+## Clase 13: Clases abstractas
+
+Las clases abstractas son tan ‘genericas’ que no tiene sentido que sean instanciadas. Usamos la keyword `abstract`.
+
+Cada vez que implementamos una clase abstracta, no podemos crear instancias de esa clase, si no solo de las clases hijas.
+
+```tsx
+abstract class Pet {} // No podemos instanciar pero si heredar
+
+class Dog extends Pet {} // De esta si podemos instanciar
+```
+
 #
