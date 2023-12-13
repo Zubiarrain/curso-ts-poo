@@ -245,4 +245,28 @@ super.functionOnParent(arguments);
 
 Al usar esta palabra reservada en el constructor de la clase hija, estamos invocando al constructor de la clase padre.
 
-#
+## Clase 10: Acceso restringido
+
+Básicamente, es la forma de heredar propiedades y métodos, se usa la palabra reservada `protected`.
+
+Es similar a como funciona una propiedad o método privado, pero nos permite realizar herencia.
+
+```tsx
+class FatherClass {
+	constructor(
+		protected property1: string,
+		propertyN: number
+	) {
+		statemenst
+	}
+}
+
+class ChildClass extends FatherClass {
+	constructor (properties and Inheritedproperties) {
+		super(InheritedProperties)
+		statemenst
+	}
+}
+```
+
+##
