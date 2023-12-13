@@ -5,6 +5,10 @@ import { faker } from "@faker-js/faker";
 export class ProductMemoryService {
   private products: Product[] = [];
 
+  getAll(){
+    return this.products;
+  }
+
   private throwError(error:string) {new Error(error)}
 
   private getIndexProduct(id: string | number) {
