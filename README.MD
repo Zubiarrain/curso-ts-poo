@@ -349,6 +349,30 @@ Podemos tipar a una promesa con genéricos:
 const variableName = new Promise<dataType>(...);
 ```
 
+## Clase 16: Tipando respuestas HTTP
+
+Es importante poder tipar tanto nuestras funciones, ya sea inferidamente o explícitamente, como las variables que manejamos internamente dentro de ella.
+
+### Aserción angle bracket
+
+Axios nos permite tipar las peticiones que hacemos de la siguiente manera.
+
+```tsx
+const { data } = axios.get<dataType>(URL);
+```
+
+### Aserción AS
+
+También podemos realizar el tipado por medio de aserción de tipos con **as**, pero lo ideal es hacerlo con el primer método (*en caso de permitirlo*).
+
+```tsx
+async function getProducts () {
+	const rta = await axios.get(URL);
+	const data = rta.data as Product[];
+	return data;
+}
+```
+
 #
 
 
