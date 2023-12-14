@@ -373,6 +373,30 @@ async function getProducts () {
 }
 ```
 
-#
+## Clase 21: Generics
+
+Con los generics podemos enviar **tipado como parámetro**:
+
+```tsx
+import { Dog }from "./8-herencia";
+
+function getValue<T>(value: T) { //*T es una convención para tus propios tipados
+	return value;
+}
+
+getValue<number>(12).toFixed()
+getValue<string>('12').length
+getValue<boolean>(true).toString()
+
+const doggy = new Dog('doggy', 'Snoop dog')
+getValue<Dog>(doggy)
+```
+
+Por convención, se utiliza el nombre **T** para dar a conocer que es un generics, es muy común ver este tipo de nombre en otros repositorios, documentación y también es usado en otros lenguajes como java y C#. Otros nombres utilizados en los generics son**:**
+
+- **E** - Elemento (*elementos en una colección*)
+- **K** - Llave
+- **N** - Número
+- **V** - Valor
 
 
